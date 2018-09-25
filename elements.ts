@@ -7,6 +7,7 @@ type element = {
       required: boolean;
       types: string[];
       booleanAttribute: boolean;
+      onlyIdl: boolean;
     }
   }
 };
@@ -858,7 +859,53 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        type: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          types: [
+            '"button"',
+            '"checkbox"',
+            '"color"',
+            '"date"',
+            '"datetime-local"',
+            '"email"',
+            '"file"',
+            '"hidden"',
+            '"image"',
+            '"month"',
+            '"number"',
+            '"password"',
+            '"radio"',
+            '"range"',
+            '"reset"',
+            '"search"',
+            '"submit"',
+            '"tel"',
+            '"text"',
+            '"time"',
+            '"url"',
+            '"week"',
+          ]
+        },
+        value: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          types: ["string"],
+        },
+        valueAsNumber: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: true,
+          types: ["number"],
+        },
+        valueAsDate: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: true,
+          types: ["number"],
+        },
       },
     },
     label: {
