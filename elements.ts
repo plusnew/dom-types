@@ -28,6 +28,9 @@ type elements = {
 const elements: elements = {
   types: {
     referrerpolicy: ['"no-referrer"', '"no-referrer-when-downgrade"', '"orgigin"', '"origin-when-cross-origin"', '"unsage-url"'],
+    target: ['"_self"', '"_blank"', '"_parent"', '"_top"'],
+    crossorigin: ['"anonymous"', '"use-credentials"'],
+    importance: ['"auto"', '"high"', '"low"'],
   },
   htmlElements: {
     // Main root
@@ -64,7 +67,7 @@ const elements: elements = {
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
-          types: ['"anonymous"', '"use-credentials'],
+          types: ['crossorigin'],
         },
         href: {
           required: false,
@@ -85,7 +88,7 @@ const elements: elements = {
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
-          types: ['"atuto"', '"high"', '"low"'],
+          types: ['importance'],
         },
         integrity: {
           required: false,
@@ -630,7 +633,7 @@ const elements: elements = {
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
-          types: ['"_self"', '"_blank"', '"_parent"', '"_top"'],
+          types: ['target'],
         },
         type: {
           required: false,
@@ -866,7 +869,104 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        alt: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        coords: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        download: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        href: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        hreflang: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: true,
+          types: ['string'],
+        },
+        nohref: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: true,
+          types: ['string'],
+        },
+        ping: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        referrerpolicy: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['referrerpolicy'],
+        },
+        rel: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        shape: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        tabindex: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: true,
+          types: ['string'],
+        },
+        target: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: true,
+          types: ['string'],
+        },
       },
     },
     audio: {
@@ -874,7 +974,48 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        autoplay: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        crossorigin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['crossorigin'],
+        },
+        loop: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        muted: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        preload: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"none"', '"metadata"', '"auto"', '""'],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     img: {
@@ -882,7 +1023,49 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        alt: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        crossorigin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['crossorigin'],
+        },
+        decoding: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"sync"', '"async"', '"auto"'],
+        },
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        importance: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['importance'],
+        },
+        ismap: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        refererrerpolicy
       },
     },
     map: {
@@ -915,9 +1098,7 @@ const elements: elements = {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {}, // @TODO didn't add properties for deprecated element
     },
     embed: {
       domInterface: HTMLEmbedElement,
