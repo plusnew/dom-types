@@ -14,6 +14,9 @@ type element = {
 };
 
 type elements = {
+  types: {
+    [typeName: string]: string[];
+  }
   htmlElements: {
     [elementName: string]: element;
   }
@@ -23,6 +26,9 @@ type elements = {
 }
 
 const elements: elements = {
+  types: {
+    referrerpolicy: ['"no-referrer"', '"no-referrer-when-downgrade"', '"orgigin"', '"origin-when-cross-origin"', '"unsage-url"'],
+  },
   htmlElements: {
     // Main root
     html: {
@@ -93,7 +99,7 @@ const elements: elements = {
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
-          types: ['"no-referrer"', '"no-referrer-when-downgrade"', '"orgigin"', '"origin-when-cross-origin"', '"unsage-url"'],
+          types: ['referrerpolicy'],
         },
         rel: {
           required: false,
@@ -131,7 +137,7 @@ const elements: elements = {
       deprecated: false,
       properties: {
         content: {
-          required: true,
+          required: false,
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
@@ -145,7 +151,7 @@ const elements: elements = {
           types: ['"content-security-policy"', '"refresh"', '"set-cookie"'],
         },
         name: {
-          required: true,
+          required: false,
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
@@ -453,79 +459,75 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        cite: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     dd: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     dir: {
       domInterface: HTMLDirectoryElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     div: {
       domInterface: HTMLDivElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     dl: {
       domInterface: HTMLDListElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     dt: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
-    fiqcaption: {
+    figcaption: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     figure: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     hr: {
       domInterface: HTMLHRElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     li: {
       domInterface: HTMLLIElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        value: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     ol: {
@@ -533,32 +535,46 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        reversed: {
+          required: true,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        start: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        type: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"a"', '"A"', '"i"', '"I"', '"1"'],
+        },
       },
     },
     p: {
       domInterface: HTMLParagraphElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     pre: {
       domInterface: HTMLPreElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     ul: {
       domInterface: HTMLUListElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Inline text semantics
@@ -567,256 +583,281 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        download: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        href: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        hreflang: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        ping: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        referrerpolicy: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['referrerpolicy'],
+        },
+        rel: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        target: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"_self"', '"_blank"', '"_parent"', '"_top"'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     abbr: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     b: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     bdi: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     bdo: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     br: {
       domInterface: HTMLBRElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        clear: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     cite: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     code: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     data: {
       domInterface: HTMLDataElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        value: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     dfn: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     em: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     i: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     kbd: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     mark: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     q: {
       domInterface: HTMLQuoteElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        cite: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     rb: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     rp: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     rt: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     rtc: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     ruby: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     s: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     samp: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     small: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     span: {
       domInterface: HTMLSpanElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     strong: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     sub: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     sup: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     time: {
       domInterface: HTMLTimeElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        datetime: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     tt: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     u: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     var: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     wbr: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Image and multimedia
