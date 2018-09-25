@@ -1519,23 +1519,103 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     noscript: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     script: {
       domInterface: HTMLScriptElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        async: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        crossorigin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['crossorigin'],
+        },
+        defer: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        importance: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['importance'],
+        },
+        integrity: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        nomodule: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['nomodule'],
+        },
+        nonce: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        text: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
 
@@ -1545,7 +1625,20 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        cite: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        datetime: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     ins: {
@@ -1553,7 +1646,20 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        cite: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        datetime: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
 
@@ -1562,16 +1668,20 @@ const elements: elements = {
       domInterface: HTMLTableCaptionElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     col: {
       domInterface: HTMLTableColElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        span: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     colgroup: {
@@ -1579,16 +1689,20 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        span: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     table: {
       domInterface: HTMLTableElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     tbody: {
       domInterface: HTMLTableSectionElement,
@@ -1603,40 +1717,88 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        colspan: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        headers: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        rowspan: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     tfoot: {
       domInterface: HTMLTableSectionElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     th: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        abbr: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        colspan: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        headers: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        rowspan: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        scope: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"row"', '"col"', '"rowgroup"', '"colgroup"', '"auto"'],
+        },
       },
     },
     thead: {
       domInterface: HTMLTableSectionElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     tr: {
       domInterface: HTMLTableRowElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Forms
