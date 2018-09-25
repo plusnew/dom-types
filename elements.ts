@@ -8,6 +8,7 @@ type element = {
       types: string[];
       booleanAttribute: boolean;
       onlyIdl: boolean;
+      deprecated: boolean;
     }
   }
 };
@@ -29,7 +30,13 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        xmlns: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
 
@@ -39,7 +46,83 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        as: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        crossorigin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"anonymous"', '"use-credentials'],
+        },
+        href: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        hreflang: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        importance: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"atuto"', '"high"', '"low"'],
+        },
+        integrity: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        referrerpolicy: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"no-referrer"', '"no-referrer-when-downgrade"', '"orgigin"', '"origin-when-cross-origin"', '"unsage-url"'],
+        },
+        rel: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        sizes: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        title: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'], // @TODO add mimetype-array
+        },
       },
     },
     meta: {
@@ -47,7 +130,39 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        content: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        "http-equiv": {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"content-security-policy"', '"refresh"', '"set-cookie"'],
+        },
+        name: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: [
+            '"application-name"',
+            '"author"',
+            '"description"',
+            '"keywords"',
+            '"referrer',
+            '"creator"',
+            '"googlebot"',
+            '"publisher"',
+            '"robots"',
+            '"slurl"',
+            '""viewport"',
+          ],
+        },
       },
     },
     style: {
@@ -55,16 +170,48 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        type: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        media: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        content: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        nonce: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        title: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     title: {
       domInterface: HTMLTitleElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Sectioning root
@@ -73,16 +220,139 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        onafterprint: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onbeforeprint: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onbeforeunload: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onblur: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onerror: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onfocus: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onhashchange: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onlanguagechange: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onload: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onmessage: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onoffline: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        ononline: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onpopstate: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onredo: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onresize: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onstorage: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onundo: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
+        onunload: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"(event: Event) => void"'],
+        },
       },
     },
     head: {
       domInterface: HTMLHeadElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Content Sectioning
@@ -90,121 +360,91 @@ const elements: elements = {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     article: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     aside: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     footer: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     header: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h1: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h2: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h3: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h4: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h5: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     h6: {
       domInterface: HTMLHeadingElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     hgroup: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     main: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     nav: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     section: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Text content
@@ -863,6 +1103,7 @@ const elements: elements = {
           required: true,
           booleanAttribute: false,
           onlyIdl: false,
+          deprecated: false,
           types: [
             '"button"',
             '"checkbox"',
@@ -892,19 +1133,22 @@ const elements: elements = {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
-          types: ["string"],
+          deprecated: false,
+          types: ['string'],
         },
         valueAsNumber: {
           required: false,
           booleanAttribute: false,
           onlyIdl: true,
-          types: ["number"],
+          deprecated: false,
+          types: ['number'],
         },
         valueAsDate: {
           required: false,
           booleanAttribute: false,
           onlyIdl: true,
-          types: ["number"],
+          deprecated: false,
+          types: ['number'],
         },
       },
     },
