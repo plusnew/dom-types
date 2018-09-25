@@ -31,6 +31,7 @@ const elements: elements = {
     target: ['"_self"', '"_blank"', '"_parent"', '"_top"'],
     crossorigin: ['"anonymous"', '"use-credentials"'],
     importance: ['"auto"', '"high"', '"low"'],
+    preload: ['"none"', '"metadata"', '"auto"', '""'],
   },
   htmlElements: {
     // Main root
@@ -1007,7 +1008,7 @@ const elements: elements = {
           booleanAttribute: false,
           onlyIdl: false,
           deprecated: false,
-          types: ['"none"', '"metadata"', '"auto"', '""'],
+          types: ['preload'],
         },
         src: {
           required: false,
@@ -1065,7 +1066,48 @@ const elements: elements = {
           deprecated: false,
           types: ['boolean'],
         },
-        refererrerpolicy
+        referrerpolicy: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['referrerpolicy'],
+        },
+        sizes: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        src: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        srcset: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        usemap: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     map: {
@@ -1073,7 +1115,13 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     track: {
@@ -1081,7 +1129,34 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        'default': {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        kind: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"subtitles"', '"captions"', '"descriptions"', '"chapters"', '"metadata"'],
+        },
+        src: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        srclang: {
+          required: true,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     video: {
@@ -1089,7 +1164,90 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        autoplay: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        buffered: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        controls: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        crossorigin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['crossorigin'],
+        },
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        loop: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        muted: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        preload: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['preload'],
+        },
+        poster: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        playsinline: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
 
@@ -1105,7 +1263,34 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     iframe: {
@@ -1113,23 +1298,149 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        allow: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        importance: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['importance'],
+        },
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        referrerpolicy: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['referrerpolicy'],
+        },
+        sandbox: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: [
+            '"allow-forms"',
+            '"allow-modals"',
+            '"allow-orientation-lock"',
+            '"allow-pointer-lock"',
+            '"allow-popups"',
+            '"allow-popups-to-escape-sandbox"',
+            '"allow-presentation"',
+            '"allow-same-origin"',
+            '"allow-ScriptProcessorNodeallow-top-navigation"',
+            '"allow-top-navigation-by-user-activation"',
+          ],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        srcdoc: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     noembed: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     object: {
       domInterface: HTMLObjectElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        data: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        form: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        height: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        typemustmatch: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
+        usemap: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        width: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['number'],
+        },
       },
     },
     param: {
@@ -1137,23 +1448,68 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        value: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     picture: {
       domInterface: HTMLPictureElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
     source: {
       domInterface: HTMLSourceElement,
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        sizes: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        src: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        srcset: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
+        media: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
 
