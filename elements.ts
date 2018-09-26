@@ -2685,7 +2685,13 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        open: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
       },
     },
     dialog: {
@@ -2693,32 +2699,32 @@ const elements: elements = {
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        open: {
+          required: false,
+          booleanAttribute: true,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['boolean'],
+        },
       },
     },
     menu: {
       domInterface: HTMLMenuElement,
       inherits: 'htmlElement',
-      deprecated: false,
-      properties: {
-
-      },
+      deprecated: true,
+      properties: {},
     },
     menuitem: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     summary: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
 
     // Web Components
@@ -2726,41 +2732,39 @@ const elements: elements = {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     element: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     shadow: {
       domInterface: HTMLElement,
       inherits: 'htmlElement',
       deprecated: true,
-      properties: {
-
-      },
+      properties: {},
     },
     slot: {
       domInterface: HTMLElement, // actually is: HTMLSlotElement
       inherits: 'htmlElement',
       deprecated: false,
       properties: {
-
+        name: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['string'],
+        },
       },
     },
     template: {
       domInterface: HTMLTemplateElement,
       inherits: 'htmlElement',
       deprecated: false,
-      properties: {
-
-      },
+      properties: {},
     },
   },
   abstract: {
