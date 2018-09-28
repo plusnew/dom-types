@@ -13,11 +13,11 @@ type element = {
   }
 };
 
-type elements = {
+type dom = {
   types: {
     [typeName: string]: string[];
   }
-  htmlElements: {
+  elements: {
     [elementName: string]: element;
   }
   abstract: {
@@ -25,7 +25,7 @@ type elements = {
   }
 }
 
-const elements: elements = {
+const dom: dom = {
   types: {
     referrerpolicy: [
       '"no-referrer"',
@@ -119,7 +119,7 @@ const elements: elements = {
       '"false"'
     ],
   },
-  htmlElements: {
+  elements: {
     // Main root
     html: {
       domInterface: HTMLHtmlElement,
@@ -3384,3 +3384,5 @@ const elements: elements = {
     },
   },
 };
+
+export default dom;

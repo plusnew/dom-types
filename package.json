@@ -1,0 +1,22 @@
+{
+  "name": "dom-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plusnew/dom-types.git"
+  },
+  "author": "Carlo Jeske",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plusnew/dom-types/issues"
+  },
+  "homepage": "https://github.com/plusnew/dom-types#readme",
+  "dependencies": {
+    "@types/node": "^10.11.2"
+  }
+}
