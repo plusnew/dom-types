@@ -1,4 +1,4 @@
-type element = {
+export type element = {
   domInterface: string;
   inherits: string[];
   deprecated: boolean
