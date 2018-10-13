@@ -22,7 +22,6 @@ function getRelativePath(from: keyof dom, to: keyof dom) {
       return '';
     } else {
       return `${to}`
-
     }
   } else {
     return `../${to}`;
@@ -35,13 +34,13 @@ function generateImport(from: keyof dom, to: keyof dom, importName: string) {
 
 function elementFactory(factoryType: 'elements' | 'abstract') {
   return ([elementName, element]: [string, element]) => {
-    let parentImport = element.inherits.map(inherit => generateImport(factoryType, 'abstract', inherit));
+    let parentImport = element.inherits.map(inherit => generateImport(factoryType, 'abstract', `${inherit}Element`));
   
     const typeImports = unique(Object.entries(element.properties).reduce((accumolator, [_propertyName, property]) => {
       return [...accumolator, ...property.types.filter((type) =>
         Object.keys(dom.types).includes(type)
       ).map((type) =>
-        generateImport(factoryType, 'types', type),
+        generateImport(factoryType, 'types', `${type}`),
       )];
     }, [] as string[]));
   
@@ -65,13 +64,13 @@ const result =
 `${parentImport}
 ${typeImports.join('\n')}
 
-type ${elementName}${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue} ${inherit}<${element.domInterface}> & `, '')}{
+type ${elementName}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue} ${inherit}Element<${element.domInterface}> & `, '')}{
   ${properties.join('\n  ')}
 };
 
-export { ${elementName} };
+export { ${elementName}Element };
 `;
-    fs.writeFileSync(getAbsolutePath(factoryType, elementName), result);
+    fs.writeFileSync(getAbsolutePath(factoryType, `${elementName}Element`), result);
   }
 }
 Object.entries(dom.elements).forEach(elementFactory('elements'));
@@ -79,7 +78,22 @@ Object.entries(dom.elements).forEach(elementFactory('elements'));
 Object.entries(dom.types).forEach(([typeName, types]) => {
   const result = `export type ${typeName} = ${generateTypeString(types)}`;
 
-  fs.writeFileSync(getAbsolutePath('types', typeName), result);
+  fs.writeFileSync(getAbsolutePath('types', `${typeName}`), result);
 });
 
 Object.entries(dom.abstract).forEach(elementFactory('abstract'));
+
+let jsxImport = Object.keys(dom.elements).map((elementName) =>
+  generateImport('elements', 'elements', `${elementName}Element`)
+).join('\n');
+
+jsxImport += 
+`declare global {
+  namespace plusnew {
+    namespace JSX {
+      ${Object.keys(dom.elements).map((elementName) => `${elementName}: ${elementName}Element;`).join('\n')}
+    }
+  }
+}`;
+
+fs.writeFileSync(path.join(__dirname, 'dist', 'jsx', 'jsx.d.ts'), jsxImport);

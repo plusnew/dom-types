@@ -123,7 +123,7 @@ const dom: dom = {
     // Main root
     html: {
       domInterface: 'HTMLHtmlElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         xmlns: {
@@ -139,7 +139,7 @@ const dom: dom = {
     // Document metadata
     link: {
       domInterface: 'HTMLLinkElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         as: {
@@ -223,7 +223,7 @@ const dom: dom = {
     },
     meta: {
       domInterface: 'HTMLMetaElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         content: {
@@ -233,7 +233,7 @@ const dom: dom = {
           deprecated: false,
           types: ['string'],
         },
-        "http-equiv": {
+        httpEquiv: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
@@ -250,20 +250,20 @@ const dom: dom = {
             '"author"',
             '"description"',
             '"keywords"',
-            '"referrer',
+            '"referrer"',
             '"creator"',
             '"googlebot"',
             '"publisher"',
             '"robots"',
             '"slurl"',
-            '""viewport"',
+            '"viewport"',
           ],
         },
       },
     },
     style: {
       domInterface: 'HTMLStyleElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         type: {
@@ -305,7 +305,7 @@ const dom: dom = {
     },
     title: {
       domInterface: 'HTMLTitleElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -313,7 +313,7 @@ const dom: dom = {
     // Sectioning root
     body: {
       domInterface: 'HTMLBodyElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         onafterprint: {
@@ -446,7 +446,7 @@ const dom: dom = {
     },
     head: {
       domInterface: 'HTMLHeadElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -454,91 +454,91 @@ const dom: dom = {
     // Content Sectioning
     address: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     article: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     aside: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     footer: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     header: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h1: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h2: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h3: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h4: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h5: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     h6: {
       domInterface: 'HTMLHeadingElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     hgroup: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     main: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     nav: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     section: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -546,7 +546,7 @@ const dom: dom = {
     // Text content
     blockquote: {
       domInterface: 'HTMLQuoteElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         cite: {
@@ -560,55 +560,55 @@ const dom: dom = {
     },
     dd: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     dir: {
       domInterface: 'HTMLDirectoryElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     div: {
       domInterface: 'HTMLDivElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     dl: {
       domInterface: 'HTMLDListElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     dt: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     figcaption: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     figure: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     hr: {
       domInterface: 'HTMLHRElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     li: {
       domInterface: 'HTMLLIElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         value: {
@@ -622,7 +622,7 @@ const dom: dom = {
     },
     ol: {
       domInterface: 'HTMLOListElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         reversed: {
@@ -650,19 +650,19 @@ const dom: dom = {
     },
     p: {
       domInterface: 'HTMLParagraphElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     pre: {
       domInterface: 'HTMLPreElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     ul: {
       domInterface: 'HTMLUListElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -670,7 +670,7 @@ const dom: dom = {
     // Inline text semantics
     a: {
       domInterface: 'HTMLAnchorElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         download: {
@@ -733,31 +733,31 @@ const dom: dom = {
     },
     abbr: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     b: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     bdi: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     bdo: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     br: {
       domInterface: 'HTMLBRElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         clear: {
@@ -771,19 +771,19 @@ const dom: dom = {
     },
     cite: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     code: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     data: {
       domInterface: 'HTMLDataElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         value: {
@@ -797,37 +797,37 @@ const dom: dom = {
     },
     dfn: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     em: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     i: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     kbd: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     mark: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     q: {
       domInterface: 'HTMLQuoteElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         cite: {
@@ -841,79 +841,79 @@ const dom: dom = {
     },
     rb: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     rp: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     rt: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     rtc: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     ruby: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     s: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     samp: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     small: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     span: {
       domInterface: 'HTMLSpanElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     strong: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     sub: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     sup: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     time: {
       domInterface: 'HTMLTimeElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         datetime: {
@@ -927,25 +927,25 @@ const dom: dom = {
     },
     tt: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     u: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     var: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     wbr: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -953,7 +953,7 @@ const dom: dom = {
     // Image and multimedia
     area: {
       domInterface: 'HTMLAreaElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         alt: {
@@ -1058,7 +1058,7 @@ const dom: dom = {
     },
     audio: {
       domInterface: 'HTMLAudioElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         autoplay: {
@@ -1107,7 +1107,7 @@ const dom: dom = {
     },
     img: {
       domInterface: 'HTMLImageElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         alt: {
@@ -1198,7 +1198,7 @@ const dom: dom = {
     },
     map: {
       domInterface: 'HTMLMapElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         name: {
@@ -1212,7 +1212,7 @@ const dom: dom = {
     },
     track: {
       domInterface: 'HTMLTrackElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         'default': {
@@ -1247,7 +1247,7 @@ const dom: dom = {
     },
     video: {
       domInterface: 'HTMLVideoElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         autoplay: {
@@ -1340,13 +1340,13 @@ const dom: dom = {
     // Embedded content
     applet: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {}, // @TODO didn't add properties for deprecated element
     },
     embed: {
       domInterface: 'HTMLEmbedElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         height: {
@@ -1381,7 +1381,7 @@ const dom: dom = {
     },
     iframe: {
       domInterface: 'HTMLIFrameElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         allow: {
@@ -1462,13 +1462,13 @@ const dom: dom = {
     },
     noembed: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     object: {
       domInterface: 'HTMLObjectElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         data: {
@@ -1531,7 +1531,7 @@ const dom: dom = {
     },
     param: {
       domInterface: 'HTMLParamElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         name: {
@@ -1552,13 +1552,13 @@ const dom: dom = {
     },
     picture: {
       domInterface: 'HTMLPictureElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     source: {
       domInterface: 'HTMLSourceElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         sizes: {
@@ -1602,7 +1602,7 @@ const dom: dom = {
     // Scripting
     canvas: {
       domInterface: 'HTMLCanvasElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         height: {
@@ -1623,13 +1623,13 @@ const dom: dom = {
     },
     noscript: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     script: {
       domInterface: 'HTMLScriptElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         async: {
@@ -1708,7 +1708,7 @@ const dom: dom = {
     // Demarcating edits
     del: {
       domInterface: 'HTMLModElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         cite: {
@@ -1729,7 +1729,7 @@ const dom: dom = {
     },
     ins: {
       domInterface: 'HTMLModElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         cite: {
@@ -1752,13 +1752,13 @@ const dom: dom = {
     // Table content
     caption: {
       domInterface: 'HTMLTableCaptionElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     col: {
       domInterface: 'HTMLTableColElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         span: {
@@ -1772,7 +1772,7 @@ const dom: dom = {
     },
     colgroup: {
       domInterface: 'HTMLTableColElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         span: {
@@ -1786,13 +1786,13 @@ const dom: dom = {
     },
     table: {
       domInterface: 'HTMLTableElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     tbody: {
       domInterface: 'HTMLTableSectionElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
 
@@ -1800,7 +1800,7 @@ const dom: dom = {
     },
     td: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         colspan: {
@@ -1828,13 +1828,13 @@ const dom: dom = {
     },
     tfoot: {
       domInterface: 'HTMLTableSectionElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     th: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         abbr: {
@@ -1876,13 +1876,13 @@ const dom: dom = {
     },
     thead: {
       domInterface: 'HTMLTableSectionElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     tr: {
       domInterface: 'HTMLTableRowElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -1890,7 +1890,7 @@ const dom: dom = {
     // Forms
     button: {
       domInterface: 'HTMLButtonElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         autofocus: {
@@ -1960,13 +1960,13 @@ const dom: dom = {
     },
     datalist: {
       domInterface: 'HTMLDataListElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     fieldset: {
       domInterface: 'HTMLFieldSetElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         disabled: {
@@ -1994,10 +1994,10 @@ const dom: dom = {
     },
     form: {
       domInterface: 'HTMLFormElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
-        'accept-charset': {
+        acceptCharset: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
@@ -2057,7 +2057,7 @@ const dom: dom = {
     },
     input: {
       domInterface: 'HTMLInputElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         type: {
@@ -2328,10 +2328,10 @@ const dom: dom = {
     },
     label: {
       domInterface: 'HTMLLabelElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
-        for: {
+        htmlFor: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
@@ -2349,13 +2349,13 @@ const dom: dom = {
     },
     legend: {
       domInterface: 'HTMLLegendElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
     meter: {
       domInterface: 'HTMLMeterElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         value: {
@@ -2411,7 +2411,7 @@ const dom: dom = {
     },
     optgroup: {
       domInterface: 'HTMLOptGroupElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         disabled: {
@@ -2432,7 +2432,7 @@ const dom: dom = {
     },
     option: {
       domInterface: 'HTMLOptionElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         disabled: {
@@ -2467,7 +2467,7 @@ const dom: dom = {
     },
     output: {
       domInterface: 'HTMLOutputElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         for: {
@@ -2495,7 +2495,7 @@ const dom: dom = {
     },
     progress: {
       domInterface: 'HTMLProgressElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         max: {
@@ -2516,7 +2516,7 @@ const dom: dom = {
     },
     select: {
       domInterface: 'HTMLSelectElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         autocomplete: {
@@ -2579,7 +2579,7 @@ const dom: dom = {
     },
     textarea: {
       domInterface: 'HTMLTextAreaElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         autocomplete: {
@@ -2686,7 +2686,7 @@ const dom: dom = {
     // Interactive elements
     details: {
       domInterface: 'HTMLDetailsElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         open: {
@@ -2700,7 +2700,7 @@ const dom: dom = {
     },
     dialog: {
       domInterface: 'HTMLDialogElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         open: {
@@ -2714,19 +2714,19 @@ const dom: dom = {
     },
     menu: {
       domInterface: 'HTMLMenuElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     menuitem: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     summary: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
@@ -2734,25 +2734,25 @@ const dom: dom = {
     // Web Components
     content: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     element: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     shadow: {
       domInterface: 'HTMLElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: true,
       properties: {},
     },
     slot: {
       domInterface: 'HTMLElement', // actually is: HTMLSlotElement
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {
         name: {
@@ -2766,13 +2766,13 @@ const dom: dom = {
     },
     template: {
       domInterface: 'HTMLTemplateElement',
-      inherits: ['htmlElement'],
+      inherits: ['globalAttributes'],
       deprecated: false,
       properties: {},
     },
   },
   abstract: {
-    htmlElement: {
+    globalAttributes: {
       inherits: [],
       domInterface: 'HTMLElement',
       deprecated: false,
@@ -3241,7 +3241,7 @@ const dom: dom = {
             '"characters"',
           ],
         },
-        "class": {
+        className: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
