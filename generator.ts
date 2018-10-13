@@ -32,6 +32,10 @@ function generateImport(from: keyof dom, to: keyof dom, importName: string) {
   return `import { ${importName} } from './${getRelativePath(from, to)}/${importName}';`;
 }
 
+function formatElement(element: string) {
+  return element.replace(/-[a-z]/g, find => find[1].toUpperCase());
+}
+
 function elementFactory(factoryType: 'elements' | 'abstract') {
   return ([elementName, element]: [string, element]) => {
     let parentImport = element.inherits.map(inherit => generateImport(factoryType, 'abstract', `${inherit}Element`));
@@ -64,13 +68,13 @@ const result =
 `${parentImport}
 ${typeImports.join('\n')}
 
-type ${elementName}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue} ${inherit}Element<${element.domInterface}> & `, '')}{
+type ${formatElement(elementName)}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue} ${inherit}Element<${element.domInterface}> & `, '')}{
   ${properties.join('\n  ')}
 };
 
-export { ${elementName}Element };
+export { ${formatElement(elementName)}Element };
 `;
-    fs.writeFileSync(getAbsolutePath(factoryType, `${elementName}Element`), result);
+    fs.writeFileSync(getAbsolutePath(factoryType, `${formatElement(elementName)}Element`), result);
   }
 }
 Object.entries(dom.elements).forEach(elementFactory('elements'));
@@ -84,14 +88,14 @@ Object.entries(dom.types).forEach(([typeName, types]) => {
 Object.entries(dom.abstract).forEach(elementFactory('abstract'));
 
 let jsxImport = Object.keys(dom.elements).map((elementName) =>
-  generateImport('elements', 'elements', `${elementName}Element`)
+  generateImport('elements', 'elements', `${formatElement(elementName)}Element`)
 ).join('\n');
 
 jsxImport += 
 `declare global {
   namespace plusnew {
     namespace JSX {
-      ${Object.keys(dom.elements).map((elementName) => `${elementName}: ${elementName}Element;`).join('\n')}
+      ${Object.keys(dom.elements).map((elementName) => `${elementName}: ${formatElement(elementName)}Element;`).join('\n')}
     }
   }
 }`;
