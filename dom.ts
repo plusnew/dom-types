@@ -1,6 +1,6 @@
 type element = {
-  domInterface: any;
-  inherits?: string;
+  domInterface: string;
+  inherits: string[];
   deprecated: boolean
   properties: {
     [attributeName: string]: {
@@ -122,8 +122,8 @@ const dom: dom = {
   elements: {
     // Main root
     html: {
-      domInterface: HTMLHtmlElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHtmlElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         xmlns: {
@@ -138,8 +138,8 @@ const dom: dom = {
 
     // Document metadata
     link: {
-      domInterface: HTMLLinkElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLLinkElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         as: {
@@ -222,8 +222,8 @@ const dom: dom = {
       },
     },
     meta: {
-      domInterface: HTMLMetaElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLMetaElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         content: {
@@ -262,8 +262,8 @@ const dom: dom = {
       },
     },
     style: {
-      domInterface: HTMLStyleElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLStyleElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         type: {
@@ -304,16 +304,16 @@ const dom: dom = {
       },
     },
     title: {
-      domInterface: HTMLTitleElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTitleElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Sectioning root
     body: {
-      domInterface: HTMLBodyElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLBodyElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         onafterprint: {
@@ -445,108 +445,108 @@ const dom: dom = {
       },
     },
     head: {
-      domInterface: HTMLHeadElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Content Sectioning
     address: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     article: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     aside: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     footer: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     header: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h1: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h2: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h3: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h4: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h5: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     h6: {
-      domInterface: HTMLHeadingElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHeadingElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     hgroup: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     main: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     nav: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     section: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Text content
     blockquote: {
-      domInterface: HTMLQuoteElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLQuoteElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         cite: {
@@ -559,56 +559,56 @@ const dom: dom = {
       },
     },
     dd: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     dir: {
-      domInterface: HTMLDirectoryElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDirectoryElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     div: {
-      domInterface: HTMLDivElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDivElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     dl: {
-      domInterface: HTMLDListElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDListElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     dt: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     figcaption: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     figure: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     hr: {
-      domInterface: HTMLHRElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLHRElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     li: {
-      domInterface: HTMLLIElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLLIElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         value: {
@@ -621,8 +621,8 @@ const dom: dom = {
       },
     },
     ol: {
-      domInterface: HTMLOListElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLOListElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         reversed: {
@@ -649,28 +649,28 @@ const dom: dom = {
       },
     },
     p: {
-      domInterface: HTMLParagraphElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLParagraphElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     pre: {
-      domInterface: HTMLPreElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLPreElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     ul: {
-      domInterface: HTMLUListElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLUListElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Inline text semantics
     a: {
-      domInterface: HTMLAnchorElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLAnchorElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         download: {
@@ -732,32 +732,32 @@ const dom: dom = {
       },
     },
     abbr: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     b: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     bdi: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     bdo: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     br: {
-      domInterface: HTMLBRElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLBRElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         clear: {
@@ -770,20 +770,20 @@ const dom: dom = {
       },
     },
     cite: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     code: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     data: {
-      domInterface: HTMLDataElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDataElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         value: {
@@ -796,38 +796,38 @@ const dom: dom = {
       },
     },
     dfn: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     em: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     i: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     kbd: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     mark: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     q: {
-      domInterface: HTMLQuoteElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLQuoteElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         cite: {
@@ -840,80 +840,80 @@ const dom: dom = {
       },
     },
     rb: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     rp: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     rt: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     rtc: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     ruby: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     s: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     samp: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     small: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     span: {
-      domInterface: HTMLSpanElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLSpanElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     strong: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     sub: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     sup: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     time: {
-      domInterface: HTMLTimeElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTimeElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         datetime: {
@@ -926,34 +926,34 @@ const dom: dom = {
       },
     },
     tt: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     u: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     var: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     wbr: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Image and multimedia
     area: {
-      domInterface: HTMLAreaElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLAreaElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         alt: {
@@ -1057,8 +1057,8 @@ const dom: dom = {
       },
     },
     audio: {
-      domInterface: HTMLAudioElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLAudioElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         autoplay: {
@@ -1106,8 +1106,8 @@ const dom: dom = {
       },
     },
     img: {
-      domInterface: HTMLImageElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLImageElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         alt: {
@@ -1197,8 +1197,8 @@ const dom: dom = {
       },
     },
     map: {
-      domInterface: HTMLMapElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLMapElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         name: {
@@ -1211,8 +1211,8 @@ const dom: dom = {
       },
     },
     track: {
-      domInterface: HTMLTrackElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTrackElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         'default': {
@@ -1246,8 +1246,8 @@ const dom: dom = {
       },
     },
     video: {
-      domInterface: HTMLVideoElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLVideoElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         autoplay: {
@@ -1339,14 +1339,14 @@ const dom: dom = {
 
     // Embedded content
     applet: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {}, // @TODO didn't add properties for deprecated element
     },
     embed: {
-      domInterface: HTMLEmbedElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLEmbedElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         height: {
@@ -1380,8 +1380,8 @@ const dom: dom = {
       },
     },
     iframe: {
-      domInterface: HTMLIFrameElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLIFrameElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         allow: {
@@ -1461,14 +1461,14 @@ const dom: dom = {
       },
     },
     noembed: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     object: {
-      domInterface: HTMLObjectElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLObjectElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         data: {
@@ -1530,8 +1530,8 @@ const dom: dom = {
       },
     },
     param: {
-      domInterface: HTMLParamElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLParamElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         name: {
@@ -1551,14 +1551,14 @@ const dom: dom = {
       },
     },
     picture: {
-      domInterface: HTMLPictureElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLPictureElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     source: {
-      domInterface: HTMLSourceElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLSourceElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         sizes: {
@@ -1601,8 +1601,8 @@ const dom: dom = {
 
     // Scripting
     canvas: {
-      domInterface: HTMLCanvasElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLCanvasElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         height: {
@@ -1622,14 +1622,14 @@ const dom: dom = {
       },
     },
     noscript: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     script: {
-      domInterface: HTMLScriptElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLScriptElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         async: {
@@ -1707,8 +1707,8 @@ const dom: dom = {
 
     // Demarcating edits
     del: {
-      domInterface: HTMLModElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLModElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         cite: {
@@ -1728,8 +1728,8 @@ const dom: dom = {
       },
     },
     ins: {
-      domInterface: HTMLModElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLModElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         cite: {
@@ -1751,14 +1751,14 @@ const dom: dom = {
 
     // Table content
     caption: {
-      domInterface: HTMLTableCaptionElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableCaptionElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     col: {
-      domInterface: HTMLTableColElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableColElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         span: {
@@ -1771,8 +1771,8 @@ const dom: dom = {
       },
     },
     colgroup: {
-      domInterface: HTMLTableColElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableColElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         span: {
@@ -1785,22 +1785,22 @@ const dom: dom = {
       },
     },
     table: {
-      domInterface: HTMLTableElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     tbody: {
-      domInterface: HTMLTableSectionElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableSectionElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
 
       },
     },
     td: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         colspan: {
@@ -1827,14 +1827,14 @@ const dom: dom = {
       },
     },
     tfoot: {
-      domInterface: HTMLTableSectionElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableSectionElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     th: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         abbr: {
@@ -1875,22 +1875,22 @@ const dom: dom = {
       },
     },
     thead: {
-      domInterface: HTMLTableSectionElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableSectionElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     tr: {
-      domInterface: HTMLTableRowElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTableRowElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Forms
     button: {
-      domInterface: HTMLButtonElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLButtonElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         autofocus: {
@@ -1959,14 +1959,14 @@ const dom: dom = {
       },
     },
     datalist: {
-      domInterface: HTMLDataListElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDataListElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     fieldset: {
-      domInterface: HTMLFieldSetElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLFieldSetElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         disabled: {
@@ -1993,8 +1993,8 @@ const dom: dom = {
       },
     },
     form: {
-      domInterface: HTMLFormElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLFormElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         'accept-charset': {
@@ -2056,8 +2056,8 @@ const dom: dom = {
       },
     },
     input: {
-      domInterface: HTMLInputElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLInputElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         type: {
@@ -2327,8 +2327,8 @@ const dom: dom = {
       },
     },
     label: {
-      domInterface: HTMLLabelElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLLabelElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         for: {
@@ -2348,14 +2348,14 @@ const dom: dom = {
       },
     },
     legend: {
-      domInterface: HTMLLegendElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLLegendElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
     meter: {
-      domInterface: HTMLMeterElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLMeterElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         value: {
@@ -2410,8 +2410,8 @@ const dom: dom = {
       },
     },
     optgroup: {
-      domInterface: HTMLOptGroupElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLOptGroupElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         disabled: {
@@ -2431,8 +2431,8 @@ const dom: dom = {
       },
     },
     option: {
-      domInterface: HTMLOptionElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLOptionElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         disabled: {
@@ -2466,8 +2466,8 @@ const dom: dom = {
       },
     },
     output: {
-      domInterface: HTMLOutputElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLOutputElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         for: {
@@ -2494,8 +2494,8 @@ const dom: dom = {
       },
     },
     progress: {
-      domInterface: HTMLProgressElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLProgressElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         max: {
@@ -2515,8 +2515,8 @@ const dom: dom = {
       },
     },
     select: {
-      domInterface: HTMLSelectElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLSelectElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         autocomplete: {
@@ -2578,8 +2578,8 @@ const dom: dom = {
       },
     },
     textarea: {
-      domInterface: HTMLTextAreaElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTextAreaElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         autocomplete: {
@@ -2685,8 +2685,8 @@ const dom: dom = {
 
     // Interactive elements
     details: {
-      domInterface: HTMLDetailsElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDetailsElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         open: {
@@ -2699,8 +2699,8 @@ const dom: dom = {
       },
     },
     dialog: {
-      domInterface: HTMLDialogElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLDialogElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         open: {
@@ -2713,46 +2713,46 @@ const dom: dom = {
       },
     },
     menu: {
-      domInterface: HTMLMenuElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLMenuElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     menuitem: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     summary: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
 
     // Web Components
     content: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     element: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     shadow: {
-      domInterface: HTMLElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement',
+      inherits: ['htmlElement'],
       deprecated: true,
       properties: {},
     },
     slot: {
-      domInterface: HTMLElement, // actually is: HTMLSlotElement
-      inherits: 'htmlElement',
+      domInterface: 'HTMLElement', // actually is: HTMLSlotElement
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {
         name: {
@@ -2765,15 +2765,16 @@ const dom: dom = {
       },
     },
     template: {
-      domInterface: HTMLTemplateElement,
-      inherits: 'htmlElement',
+      domInterface: 'HTMLTemplateElement',
+      inherits: ['htmlElement'],
       deprecated: false,
       properties: {},
     },
   },
   abstract: {
     htmlElement: {
-      domInterface: HTMLElement,
+      inherits: [],
+      domInterface: 'HTMLElement',
       deprecated: false,
       properties: {
         // Event handlers
