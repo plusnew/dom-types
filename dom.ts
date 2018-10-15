@@ -1949,6 +1949,13 @@ const dom: dom = {
           deprecated: false,
           types: ['string'],
         },
+        type: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['"button"', '"reset"', '"submit"'],
+        },
         value: {
           required: false,
           booleanAttribute: false,

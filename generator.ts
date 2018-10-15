@@ -68,7 +68,7 @@ const result =
 `${parentImport}
 ${typeImports.join('\n')}
 
-type ${formatElement(elementName)}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue} ${inherit}Element<${element.domInterface}> & `, '')}{
+type ${formatElement(elementName)}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue}${inherit}Element<${element.domInterface}> & `, '')}{
   ${properties.join('\n  ')}
 };
 
