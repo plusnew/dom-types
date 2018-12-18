@@ -2315,7 +2315,7 @@ const dom: dom = {
           booleanAttribute: false,
           onlyIdl: true,
           deprecated: false,
-          types: ['number'],
+          types: ['Date'],
         },
         width: {
           required: false,
