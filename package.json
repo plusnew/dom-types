@@ -16,7 +16,9 @@
     "url": "https://github.com/plusnew/dom-types/issues"
   },
   "homepage": "https://github.com/plusnew/dom-types#readme",
-  "dependencies": {
-    "@types/node": "^10.11.2"
+  "devDependencies": {
+    "@types/node": "^10.11.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
   }
 }

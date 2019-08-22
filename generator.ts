@@ -56,7 +56,7 @@ function elementFactory(factoryType: 'elements' | 'abstract') {
         typedPropertyName += '?';
       }
   
-      return `${typedPropertyName}: ${generateTypeString(property.types)};`;
+      return `${typedPropertyName}: ${generateTypeString(property.types)}${property.required ? '' : ' | null'};`;
     });
 
     let genericInformation = '';
