@@ -2310,7 +2310,7 @@ const dom: dom = {
           deprecated: false,
           types: ['string'],
         },
-        valueAsNumber: {
+        /*valueAsNumber: {
           required: false,
           booleanAttribute: false,
           onlyIdl: true,
@@ -2323,7 +2323,7 @@ const dom: dom = {
           onlyIdl: true,
           deprecated: false,
           types: ['Date'],
-        },
+        },*/
         width: {
           required: false,
           booleanAttribute: false,
@@ -3761,7 +3761,7 @@ const dom: dom = {
             '"characters"',
           ],
         },
-        className: {
+        class: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
