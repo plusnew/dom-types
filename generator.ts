@@ -9,7 +9,7 @@ function unique(arr: string[]) {
 }
 
 function getAbsolutePath(type: keyof dom, name: string) {
-  return path.join(__dirname, 'dist', getRelativePath('elements', type), `${name}.d.ts`);
+  return path.join(__dirname, 'dist', getRelativePath('elements', type), `${name}.ts`);
 }
 
 function generateTypeString(types: string[]) {
@@ -64,15 +64,21 @@ function elementFactory(factoryType: 'elements' | 'abstract') {
       genericInformation = '<currentElement>'
     }
 
-const result =
-`${parentImport}
-${typeImports.join('\n')}
+let result =`${parentImport}`;
+if (typeImports.length > 0) {
+  result += `\n${typeImports.join('\n')}`;
+}
 
-type ${formatElement(elementName)}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue}${inherit}Element<${element.domInterface}> & `, '')}{
-  ${properties.join('\n  ')}
-};
+result +=`\ntype ${formatElement(elementName)}Element${genericInformation} = ${element.inherits.reduce((previousValue, inherit) => `${previousValue}${inherit}Element<${element.domInterface}>`, '')}`;
 
-export { ${formatElement(elementName)}Element };
+
+if (properties.length > 0) {
+  result += ` & {\n  ${properties.join('\n  ')}\n};`;
+} else {
+  result += ';';
+}
+
+result += `\n\nexport { ${formatElement(elementName)}Element };
 `;
     fs.writeFileSync(getAbsolutePath(factoryType, `${formatElement(elementName)}Element`), result);
   }
@@ -80,7 +86,7 @@ export { ${formatElement(elementName)}Element };
 Object.entries(dom.elements).forEach(elementFactory('elements'));
 
 Object.entries(dom.types).forEach(([typeName, types]) => {
-  const result = `export type ${typeName} = ${generateTypeString(types)}`;
+  const result = `export type ${typeName} = ${generateTypeString(types)};\n`;
 
   fs.writeFileSync(getAbsolutePath('types', `${typeName}`), result);
 });
@@ -100,4 +106,4 @@ jsxImport +=
   }
 }`;
 
-fs.writeFileSync(path.join(__dirname, 'dist', 'jsx', 'jsx.d.ts'), jsxImport);
+fs.writeFileSync(path.join(__dirname, 'dist', 'jsx', 'jsx.ts'), jsxImport);
