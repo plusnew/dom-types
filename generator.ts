@@ -9,7 +9,7 @@ function unique(arr: string[]) {
 }
 
 function getAbsolutePath(type: keyof dom, name: string) {
-  return path.join(__dirname, 'dist', getRelativePath('elements', type), `${name}.ts`);
+  return path.join(__dirname, 'dist', getRelativePath('elements', type), `${name}.d.ts`);
 }
 
 function generateTypeString(types: string[]) {
@@ -106,4 +106,4 @@ jsxImport +=
   }
 }`;
 
-fs.writeFileSync(path.join(__dirname, 'dist', 'jsx', 'jsx.ts'), jsxImport);
+fs.writeFileSync(path.join(__dirname, 'dist', 'jsx', 'jsx.d.ts'), jsxImport);
