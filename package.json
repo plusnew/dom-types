@@ -18,7 +18,7 @@
   "homepage": "https://github.com/plusnew/dom-types#readme",
   "devDependencies": {
     "@types/node": "^13.9.2",
-    "ts-node": "^8.6.2",
+    "ts-node": "^8.7.0",
     "typescript": "^3.8.3"
   }
 }
