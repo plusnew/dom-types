@@ -3290,6 +3290,13 @@ const dom: dom = {
           deprecated: false,
           types: ['((event: Event & { currentTarget: currentElement }) => void)'],
         },
+        onbeforeinput: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: InputEvent & { currentTarget: currentElement }) => void)'],
+        },
         onblur: {
           required: false,
           booleanAttribute: false,
@@ -3345,6 +3352,27 @@ const dom: dom = {
           onlyIdl: false,
           deprecated: false,
           types: ['((event: PointerEvent & { currentTarget: currentElement }) => void)'],
+        },
+        oncompositionstart: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: CompositionEvent & { currentTarget: currentElement }) => void)'],
+        },
+        oncompositionupdate: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: CompositionEvent & { currentTarget: currentElement }) => void)'],
+        },
+        oncompositionend: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: CompositionEvent & { currentTarget: currentElement }) => void)'],
         },
         oncuechange: {
           required: false,
@@ -3445,6 +3473,20 @@ const dom: dom = {
           types: ['((event: ErrorEvent & { currentTarget: currentElement }) => void)'],
         },
         onfocus: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: FocusEvent & { currentTarget: currentElement }) => void)'],
+        },
+        onfocusin: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: FocusEvent & { currentTarget: currentElement }) => void)'],
+        },
+        onfocusout: {
           required: false,
           booleanAttribute: false,
           onlyIdl: false,
@@ -3737,6 +3779,13 @@ const dom: dom = {
           onlyIdl: false,
           deprecated: false,
           types: ['((event: Event & { currentTarget: currentElement }) => void)'],
+        },
+        onwheel: {
+          required: false,
+          booleanAttribute: false,
+          onlyIdl: false,
+          deprecated: false,
+          types: ['((event: WheelEvent & { currentTarget: currentElement }) => void)'],
         },
 
         accesskey: {
